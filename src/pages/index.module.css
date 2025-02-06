@@ -1,0 +1,77 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner {
+  padding: 0 0 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroTitle {
+  color: var(--ifm-color-primary) !important;
+}
+
+.heroSubtitle {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid var(--ifm-color-primary); /* Cursor effect */
+  width: 0;
+  animation: typing 8s steps(20, end)  infinite alternate, 
+             blink 0.7s infinite;
+}
+
+/* Animasi mengetik dan menghapus */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 21%; /* Sesuai jumlah karakter teks */
+  }
+  100% {
+    width: 0;
+  }
+}
+
+/* Animasi kursor berkedip */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.appLogo {
+  height: 55vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .appLogo {
+    animation: app-logo-spin infinite 3s linear;
+  }
+}
+
+@keyframes app-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
