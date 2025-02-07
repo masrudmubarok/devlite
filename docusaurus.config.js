@@ -31,7 +31,7 @@ const config = {
       ({
         docs: {
           routeBasePath: 'docs',
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve('./config/sidebars.js'),
           editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
@@ -53,7 +53,7 @@ const config = {
         id: 'genin',
         path: 'academy/genin',
         routeBasePath: 'academy/genin',
-        sidebarPath: require.resolve('./sidebarsGenin.js'),
+        sidebarPath: require.resolve('./config/sidebarsGenin.js'),
       },
     ],
     [
@@ -62,7 +62,7 @@ const config = {
         id: 'chunin',
         path: 'academy/chunin',
         routeBasePath: 'academy/chunin',
-        sidebarPath: require.resolve('./sidebarsChunin.js'),
+        sidebarPath: require.resolve('./config/sidebarsChunin.js'),
       },
     ],
     [
@@ -71,7 +71,7 @@ const config = {
         id: 'jounin',
         path: 'academy/jounin',
         routeBasePath: 'academy/jounin',
-        sidebarPath: require.resolve('./sidebarsJounin.js'),
+        sidebarPath: require.resolve('./config/sidebarsJounin.js'),
       },
     ],
     [
@@ -80,7 +80,7 @@ const config = {
         id: 'sannin',
         path: 'academy/sannin',
         routeBasePath: 'academy/sannin',
-        sidebarPath: require.resolve('./sidebarsSannin.js'),
+        sidebarPath: require.resolve('./config/sidebarsSannin.js'),
       },
     ],
     [
@@ -89,7 +89,7 @@ const config = {
         id: 'kage',
         path: 'academy/kage',
         routeBasePath: 'academy/kage',
-        sidebarPath: require.resolve('./sidebarsKage.js'),
+        sidebarPath: require.resolve('./config/sidebarsKage.js'),
       },
     ],
   ],
