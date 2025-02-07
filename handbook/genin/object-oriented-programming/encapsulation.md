@@ -1,8 +1,8 @@
 ---
-sidebar_position: 2
+sidebar_position: 4
 ---
 
-# Searching
+# Encapsulation
 
 Documents are **groups of pages** connected through:
 
@@ -49,8 +49,8 @@ export default {
     'hello',
     {
       type: 'category',
-      label: 'Algorithms',
-      items: ['algorithm/searching'],
+      label: 'Object Oriented Programming',
+      items: ['object-oriented-programming/encapsulation'],
     },
   ],
 };

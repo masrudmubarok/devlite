@@ -34,11 +34,6 @@ const config = {
           sidebarPath: require.resolve('./config/sidebars.js'),
           editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        blog: {
-          showReadingTime: true,
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -51,8 +46,8 @@ const config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'genin',
-        path: 'academy/genin',
-        routeBasePath: 'academy/genin',
+        path: 'handbook/genin',
+        routeBasePath: 'handbook/genin',
         sidebarPath: require.resolve('./config/sidebarsGenin.js'),
       },
     ],
@@ -60,8 +55,8 @@ const config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'chunin',
-        path: 'academy/chunin',
-        routeBasePath: 'academy/chunin',
+        path: 'handbook/chunin',
+        routeBasePath: 'handbook/chunin',
         sidebarPath: require.resolve('./config/sidebarsChunin.js'),
       },
     ],
@@ -69,8 +64,8 @@ const config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'jounin',
-        path: 'academy/jounin',
-        routeBasePath: 'academy/jounin',
+        path: 'handbook/jounin',
+        routeBasePath: 'handbook/jounin',
         sidebarPath: require.resolve('./config/sidebarsJounin.js'),
       },
     ],
@@ -78,8 +73,8 @@ const config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'sannin',
-        path: 'academy/sannin',
-        routeBasePath: 'academy/sannin',
+        path: 'handbook/sannin',
+        routeBasePath: 'handbook/sannin',
         sidebarPath: require.resolve('./config/sidebarsSannin.js'),
       },
     ],
@@ -87,9 +82,18 @@ const config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'kage',
-        path: 'academy/kage',
-        routeBasePath: 'academy/kage',
+        path: 'handbook/kage',
+        routeBasePath: 'handbook/kage',
         sidebarPath: require.resolve('./config/sidebarsKage.js'),
+      },
+    ],
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      {
+        hashed: true,
+        indexDocs: true,
+        indexPages: true,
+        highlightSearchTermsOnTargetPage: true,
       },
     ],
   ],
@@ -105,43 +109,40 @@ const config = {
       items: [
         {
           type: 'dropdown',
-          label: 'Academy',
-          position: 'left',
+          label: 'Handbook',
+          position: 'right',
           items: [
             {
-              to: 'academy/genin/intro',
+              to: 'handbook/genin/intro',
               label: 'Genin',
               activeBaseRegex: '/genin/',
             },
             {
-              to: 'academy/chunin/intro',
+              to: 'handbook/chunin/intro',
               label: 'Chunin',
               activeBaseRegex: '/chunin/',
             },
             {
-              to: 'academy/jounin/intro',
+              to: 'handbook/jounin/intro',
               label: 'Jounin',
               activeBaseRegex: '/jounin/',
             },
             {
-              to: 'academy/sannin/intro',
+              to: 'handbook/sannin/intro',
               label: 'Sannin',
               activeBaseRegex: '/sannin/',
             },
             {
-              to: 'academy/kage/intro',
+              to: 'handbook/kage/intro',
               label: 'Kage',
               activeBaseRegex: '/kage/',
             },
           ],
         },
         {
-          href: 'https://github.com/masrudmubarok',
-          'aria-label': 'GitHub',
-          className: 'navbar__icon navbar__github',
+          type: 'search',
           position: 'right',
-          html: '<i class="fa fa-github"></i>',
-        },                               
+        },                              
       ],
     },
     prism: {

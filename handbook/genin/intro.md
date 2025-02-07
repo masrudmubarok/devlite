@@ -14,24 +14,35 @@ Welcome to the **Genin Lesson**, the starting point for mastering software devel
 - Java
 
 ### 2. Algorithm
-- Sorting Algorithms
-- Searching Algorithms
-- Basic Recursion
-- Greedy Algorithms:
+- Searching
+- Sorting
+- Recursion
+- Basic Math
+- Greedy
+- Graph
+- Hashing
 - Backtracking
-- String Algorithms
+- Djikstra
 
-### 3. Web Development Basics
-- **HTML** 
-- **CSS**
+### 3. Setup Local Environment
+- VS Code
+- Extensions
+- Run First Program
 
-### 4. Version Control & Tools
-- Introduction to **Git & GitHub**
-- Setting up a development environment (VS Code, Node.js, etc.)
+### 4. Web Development Basics
+- HTML
+- CSS
 
-### 5. Problem-Solving & Debugging
-- Debugging techniques
-- Writing clean and readable code
+### 5. Version Control
+- Git
+- GitHub
+
+### 6. Object Oriented Programming
+- Class & Object
+- Inheritance
+- Polymorphism
+- Encapsulation
+- Abstraction
 
 ## Next Steps
 After completing the **Genin Lesson**, you will be ready to advance to the **Chunin Level**, where you will deepen your knowledge in front-end and back-end development.

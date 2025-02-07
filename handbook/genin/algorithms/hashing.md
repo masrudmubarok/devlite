@@ -1,8 +1,8 @@
 ---
-sidebar_position: 1
+sidebar_position: 7
 ---
 
-# Sorting
+# Hashing
 
 Documents are **groups of pages** connected through:
 
@@ -49,8 +49,8 @@ export default {
     'hello',
     {
       type: 'category',
-      label: '2. Algorithms',
-      items: ['algorithm/sorting'],
+      label: 'Algorithms',
+      items: ['algorithm/hashing'],
     },
   ],
 };
