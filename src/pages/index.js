@@ -10,22 +10,36 @@ import styles from './index.module.css';
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <header className={clsx('hero', styles.heroBanner)}>
-      <div className="container">
-      <img src='/img/shurri.png' className={styles.appLogo} alt="logo" />
-        <Heading as="h1" className={clsx('hero__title', styles.heroTitle)}>
-          {siteConfig.title}
-        </Heading>
-        <p className={clsx('hero__subtitle', styles.heroSubtitle)}>{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--primary button--lg"
-            to="/docs/intro">
-            Get Started
-          </Link>
+    <section className={styles.fullScreen}>
+      <header className={clsx('hero', styles.heroBanner)}>
+        <div className="container">
+          <img src='/img/shurri.png' className={styles.appLogo} alt="logo" />
+          <Heading as="h3" className={clsx('hero__title', styles.heroTitle, styles.smallHeading)}>
+            {siteConfig.title}
+          </Heading>
+          <p className={clsx('hero__subtitle', styles.heroSubtitle)}>{siteConfig.tagline}</p>
+          <div className={styles.buttons}>
+            <Link
+              className="button button--primary button--lg"
+              to="academy/genin/intro">
+              Get Started
+            </Link>
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
+    </section>
+  );
+}
+
+function HomepageFeaturesWrapper() {
+  return (
+    <section className={styles.fullScreen}>
+      <header className={clsx('hero', styles.heroBanner)}>
+        <div className="container">
+          <HomepageFeatures />
+        </div>
+      </header>
+    </section>
   );
 }
 
@@ -35,7 +49,10 @@ export default function Home() {
     <Layout
       title={`Devlite`}
       description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
+      <div className={styles.scrollContainer}>
+        <HomepageHeader />
+        <HomepageFeaturesWrapper />
+      </div>
     </Layout>
   );
 }

@@ -20,6 +20,9 @@ importers:
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
+      font-awesome:
+        specifier: ^4.7.0
+        version: 4.7.0
       prism-react-renderer:
         specifier: ^2.4.1
         version: 2.4.1(react@19.0.0)
@@ -29,7 +32,13 @@ importers:
       react-dom:
         specifier: ^19.0.0
         version: 19.0.0(react@19.0.0)
+      react-icons:
+        specifier: ^5.4.0
+        version: 5.4.0(react@19.0.0)
     devDependencies:
+      '@babel/plugin-syntax-jsx':
+        specifier: ^7.25.9
+        version: 7.25.9(@babel/core@7.26.7)
       '@docusaurus/module-type-aliases':
         specifier: 3.7.0
         version: 3.7.0(acorn@8.14.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -2474,6 +2483,10 @@ packages:
       debug:
         optional: true
 
+  font-awesome@4.7.0:
+    resolution: {integrity: sha512-U6kGnykA/6bFmg1M/oT9EkFeIYv7JlX3bozwQJWiiLz6L0w3F5vBVPxHlwyX/vtNq1ckcpRKOB9f2Qal/VtFpg==}
+    engines: {node: '>=0.10.3'}
+
   fork-ts-checker-webpack-plugin@6.5.3:
     resolution: {integrity: sha512-SbH/l9ikmMWycd5puHJKTkZJKddF4iRLyW3DeZ08HTI7NGyLS38MXd/KGgeWumQO7YNQbW2u/NtPT2YowbPaGQ==}
     engines: {node: '>=10', yarn: '>=1.0.0'}
@@ -4098,6 +4111,11 @@ packages:
 
   react-fast-compare@3.2.2:
     resolution: {integrity: sha512-nsO+KSNgo1SbJqJEYRE9ERzo7YtYbou/OqjSQKxV7jcKox7+usiUVZOAC+XnDOABXggQTno0Y1CpVnuWEc1boQ==}
+
+  react-icons@5.4.0:
+    resolution: {integrity: sha512-7eltJxgVt7X64oHh6wSWNwwbKTCtMfK35hcjvJS0yxEAhPM8oUKdS3+kqaW1vicIltw+kR2unHaa12S9pPALoQ==}
+    peerDependencies:
+      react: '*'
 
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
@@ -8349,6 +8367,8 @@ snapshots:
 
   follow-redirects@1.15.9: {}
 
+  font-awesome@4.7.0: {}
+
   fork-ts-checker-webpack-plugin@6.5.3(typescript@5.7.3)(webpack@5.97.1):
     dependencies:
       '@babel/code-frame': 7.26.2
@@ -10337,6 +10357,10 @@ snapshots:
   react-error-overlay@6.0.11: {}
 
   react-fast-compare@3.2.2: {}
+
+  react-icons@5.4.0(react@19.0.0):
+    dependencies:
+      react: 19.0.0
 
   react-is@16.13.1: {}
 

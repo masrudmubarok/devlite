@@ -3,16 +3,57 @@
  * and scoped locally.
  */
 
+.fullScreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Mengisi seluruh tinggi layar */
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.scrollContainer {
+  overflow-y: auto;
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+}
+
+.scrollContainer > section {
+  scroll-snap-align: start;
+  height: 100vh;
+}
+
 .heroBanner {
-  padding: 0 0 4rem 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
   text-align: center;
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 
 @media screen and (max-width: 996px) {
   .heroBanner {
-    padding: 2rem;
+    padding: -3.5rem;
+  }
+
+  .heroSubtitle {
+    display: none !important;
+  }
+
+  .container {
+    max-width: 90%;
+    text-align: center;
   }
 }
 
@@ -24,6 +65,7 @@
 
 .heroTitle {
   color: var(--ifm-color-primary) !important;
+  font-size: 2.3rem;
 }
 
 .heroSubtitle {
@@ -32,7 +74,7 @@
   overflow: hidden;
   border-right: 2px solid var(--ifm-color-primary); /* Cursor effect */
   width: 0;
-  animation: typing 8s steps(20, end)  infinite alternate, 
+  animation: typing 10s steps(20, end)  infinite alternate, 
              blink 0.7s infinite;
 }
 
@@ -42,7 +84,7 @@
     width: 0;
   }
   50% {
-    width: 21%; /* Sesuai jumlah karakter teks */
+    width: 47%; /* Sesuai jumlah karakter teks */
   }
   100% {
     width: 0;
@@ -59,11 +101,13 @@
 .appLogo {
   height: 55vmin;
   pointer-events: none;
+  margin-top: -7%; /* Menggeser logo ke atas */
+  max-width: 100%;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .appLogo {
-    animation: app-logo-spin infinite 3s linear;
+    animation: app-logo-spin infinite 5s linear;
   }
 }
 
