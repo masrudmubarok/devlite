@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import styles from "./author.module.css";
+import styles from "./masrudmubarok.module.css";
+import { motion } from "framer-motion";
 import { FaLinkedin, FaGithub, FaYoutube, FaEnvelope, FaGlobe } from "react-icons/fa";
 
-export default function AuthorPage() {
+export default function MasrudMubarok() {
   const [iconTransforms, setIconTransforms] = useState({
     linkedin: { x: 0, y: 0 },
     github: { x: 0, y: 0 },
@@ -88,7 +89,7 @@ export default function AuthorPage() {
             />
           </a>
           <a
-            href="https://devlite.org"
+            onClick={() => window.location.href = "/"}
             className={styles.link}
             target="_blank"
             rel="noopener noreferrer"

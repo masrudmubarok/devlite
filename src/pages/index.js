@@ -1,8 +1,10 @@
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
+import { motion } from "framer-motion";
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import HomepageAbout from '@site/src/components/HomepageAbout';
+import HomepageRoadmap from '@site/src/components/HomepageRoadmap';
 
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
@@ -17,13 +19,16 @@ function HomepageHeader() {
           <Heading as="h3" className={clsx('hero__title', styles.heroTitle, styles.smallHeading)}>
             {siteConfig.title}
           </Heading>
-          <p className={clsx('hero__subtitle', styles.heroSubtitle)}>{siteConfig.tagline}</p>
+          <p className="hero__subtitle">{siteConfig.tagline}</p>
           <div className={styles.buttons}>
-            <Link
+            <motion.button
               className="button button--primary button--lg"
-              to="handbook/genin/intro">
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => window.location.href = "/handbook/genin/intro"}
+            >
               Get Started
-            </Link>
+            </motion.button>
           </div>
         </div>
       </header>
@@ -31,14 +36,22 @@ function HomepageHeader() {
   );
 }
 
-function HomepageFeaturesWrapper() {
+function HomepageAboutWrapper() {
   return (
-    <section className={styles.fullScreen}>
-      <header className={clsx('hero', styles.heroBanner)}>
-        <div className="container">
-          <HomepageFeatures />
-        </div>
-      </header>
+    <section id="about" className={styles.heroBanner}>
+      <div className={clsx(styles.whiteBackgroundContainer)}>
+        <HomepageAbout />
+      </div>
+    </section>
+  );
+}
+
+function HomepageRoadmapWrapper() {
+  return (
+    <section id="roadmap" className={clsx(styles.heroBanner, styles.dynamicHeight, styles.handbooksSection)}>
+      <div className="container">
+        <HomepageRoadmap />
+      </div>
     </section>
   );
 }
@@ -51,7 +64,8 @@ export default function Home() {
       description="Description will go into a meta tag in <head />">
       <div className={styles.scrollContainer}>
         <HomepageHeader />
-        <HomepageFeaturesWrapper />
+        <HomepageAboutWrapper />
+        <HomepageRoadmapWrapper />
       </div>
     </Layout>
   );

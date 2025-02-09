@@ -4,12 +4,10 @@ import { FaGithub, FaYoutube } from 'react-icons/fa';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Mastering Software Development',
-  tagline: 'Code Like a Ninja: Fast, Fierce, Unstoppable 🚀',
+  tagline: 'Like a Ninja: Fast, Fierce, Unstoppable 🚀',
   favicon: 'img/devlite.png',
 
-  // Set the production URL of your site here
   url: 'https://your-docusaurus-site.example.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
   baseUrl: '/',
 
   organizationName: 'facebook',
@@ -18,7 +16,6 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  // Internationalization settings
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -27,7 +24,6 @@ const config = {
   presets: [
     [
       'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
           routeBasePath: 'docs',
@@ -98,7 +94,7 @@ const config = {
     ],
   ],
 
-  themeConfig: /** @type {import('@docusaurus/preset-classic').ThemeConfig} */ ({
+  themeConfig: ({
     image: 'img/devlite.png',
     navbar: {
       title: 'DEVLITE',
@@ -140,16 +136,28 @@ const config = {
           ],
         },
         {
+          to: '/#roadmap',
+          label: 'Roadmap',
+          activeBaseRegex: '/#roadmap',
+          position: 'right',
+        },
+        {
+          to: '/#about',
+          label: 'About',
+          activeBaseRegex: '/#about',
+          position: 'right',
+        },
+        {
           type: 'search',
           position: 'right',
-        },                              
+        },
       ],
     },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
-  }),
+  }),  
 };
 
 export default config;
