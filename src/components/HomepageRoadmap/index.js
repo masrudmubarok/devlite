@@ -1,4 +1,5 @@
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
+import { motion } from "framer-motion";
 import 'react-vertical-timeline-component/style.min.css';
 
 function Roadmap() {
@@ -11,40 +12,55 @@ function Roadmap() {
     ];
 
     return (
-        <>
-          <div className="wrapper">
-              <h1>Roadmap</h1>
-              <VerticalTimeline lineColor="silver">
-                  {stages.map((stage, index) => (
-                      <VerticalTimelineElement
-                          key={index}
-                          className="vertical-timeline-element--work"
-                          contentStyle={{ background: '#0ead95', color: '#fff', border: '2px solid #0ead95', padding: '20px' }}
-                          iconStyle={{ background: '#0ead95', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '20px', fontWeight: 'bold' }}
-                          icon={<span>{index + 1}</span>}
-                          arrowStyle={{ display: 'none' }}
-                      >
-                          <h3 className="vertical-timeline-element-title">{stage.title}</h3>
-                          <p>{stage.description}</p>
-                          <button 
-                              onClick={() => window.location.href = stage.link} 
-                              style={{ 
-                                  background: '#fff', 
-                                  color: '#0ead95', 
-                                  padding: '10px 20px', 
-                                  border: 'none', 
-                                  cursor: 'pointer', 
-                                  marginTop: '10px', 
-                                  borderRadius: '20px' 
-                              }}
-                          >
-                              Learn More
-                          </button>
-                      </VerticalTimelineElement>
-                  ))}
-              </VerticalTimeline>
-          </div>
-        </>
+        <div className="wrapper">
+            <h1>Roadmap</h1>
+            
+            {/* Motion.div untuk animasi VerticalTimeline */}
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}  // Mulai dari bawah dengan opacity 0
+                whileInView={{ opacity: 1, y: 0 }}  // Muncul saat masuk viewport
+                transition={{ duration: 1, ease: "easeOut" }}  // Efek smooth
+                viewport={{ once: false, amount: 0.2 }}  // Animasi berjalan setiap kali masuk viewport
+            >
+                <VerticalTimeline lineColor="silver">
+                    {stages.map((stage, index) => (
+                        <VerticalTimelineElement
+                            key={index}
+                            className="vertical-timeline-element--work"
+                            contentStyle={{ background: '#0ead95', color: '#fff', border: '2px solid #0ead95', padding: '20px' }}
+                            iconStyle={{ background: '#0ead95', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '20px', fontWeight: 'bold' }}
+                            icon={<span>{index + 1}</span>}
+                            arrowStyle={{ display: 'none' }}
+                        >
+                            {/* Motion.div untuk animasi tiap elemen */}
+                            <motion.div
+                                initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.8, ease: "easeOut" }}
+                                viewport={{ once: false, amount: 0.3 }}
+                            >
+                                <h3 className="vertical-timeline-element-title">{stage.title}</h3>
+                                <p>{stage.description}</p>
+                                <button 
+                                    onClick={() => window.location.href = stage.link} 
+                                    style={{ 
+                                        background: '#fff', 
+                                        color: '#0ead95', 
+                                        padding: '10px 20px', 
+                                        border: 'none', 
+                                        cursor: 'pointer', 
+                                        marginTop: '10px', 
+                                        borderRadius: '20px' 
+                                    }}
+                                >
+                                    Learn More
+                                </button>
+                            </motion.div>
+                        </VerticalTimelineElement>
+                    ))}
+                </VerticalTimeline>
+            </motion.div>
+        </div>
     );
 }
 

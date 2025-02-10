@@ -153,6 +153,10 @@ const config = {
         },
       ],
     },
+    footer: {
+      style: 'dark', // Bisa 'light' atau 'dark'
+      copyright: `© ${new Date().getFullYear()} Devlite. All rights reserved.`,
+    },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,

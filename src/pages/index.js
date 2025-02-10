@@ -5,6 +5,8 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageAbout from '@site/src/components/HomepageAbout';
 import HomepageRoadmap from '@site/src/components/HomepageRoadmap';
+import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import HomepageFeedback from '@site/src/components/HomepageFeedback';
 
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
@@ -39,7 +41,7 @@ function HomepageHeader() {
 function HomepageAboutWrapper() {
   return (
     <section id="about" className={styles.heroBanner}>
-      <div className={clsx(styles.whiteBackgroundContainer)}>
+      <div>
         <HomepageAbout />
       </div>
     </section>
@@ -56,6 +58,26 @@ function HomepageRoadmapWrapper() {
   );
 }
 
+function HomepageFeaturesWrapper() {
+  return (
+    <section id="features" className={styles.heroBanner}>
+      <div>
+        <HomepageFeatures />
+      </div>
+    </section>
+  );
+}
+
+function HomepageFeedbackWrapper() {
+  return (
+    <section id="feedback" className={styles.heroBanner}>
+      <div>
+        <HomepageFeedback />
+      </div>
+    </section>
+  );
+}
+
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
@@ -66,6 +88,8 @@ export default function Home() {
         <HomepageHeader />
         <HomepageAboutWrapper />
         <HomepageRoadmapWrapper />
+        <HomepageFeaturesWrapper />
+        <HomepageFeedbackWrapper />
       </div>
     </Layout>
   );
