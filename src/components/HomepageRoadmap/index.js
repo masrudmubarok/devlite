@@ -41,20 +41,24 @@ function Roadmap() {
                             >
                                 <h3 className="vertical-timeline-element-title">{stage.title}</h3>
                                 <p>{stage.description}</p>
-                                <button 
+                                <motion.button 
                                     onClick={() => window.location.href = stage.link} 
                                     style={{ 
                                         background: '#fff', 
                                         color: '#0ead95', 
                                         padding: '10px 20px', 
-                                        border: 'none', 
+                                        border: '2px solid #0ead95', 
                                         cursor: 'pointer', 
                                         marginTop: '10px', 
-                                        borderRadius: '20px' 
+                                        borderRadius: '8px',  
+                                        fontWeight: 'bold',
+                                        transition: 'background 0.3s ease-out'  
                                     }}
+                                    whileHover={{ scale: 1.1 }}   // Efek membesar saat hover
+                                    whileTap={{ scale: 0.95 }}    // Efek mengecil saat diklik
                                 >
                                     Learn More
-                                </button>
+                                </motion.button>
                             </motion.div>
                         </VerticalTimelineElement>
                     ))}

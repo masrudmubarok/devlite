@@ -80,18 +80,32 @@ function HomepageFeedback() {
             <p className={styles.subtitle}>
               If you find this content useful, consider supporting us to keep it running.
             </p>
-            <motion.a
-                href="https://www.buymeacoffee.com/yourprofile"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="button button--secondary button--lg"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                >
-                <span style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-                    <Coffee size={20} /> Buy Me a Coffee
-                </span>
-                </motion.a>
+            
+            {/* Wrapper agar tombol berada di tengah */}
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+              <motion.a
+                  href="https://www.buymeacoffee.com/yourprofile"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="button button--secondary button--lg"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                  style={{
+                      backgroundColor: '#8B5E3C', // Warna coklat susu
+                      color: '#fff', // Teks putih
+                      padding: '8px 16px', // Ukuran lebih kecil agar sesuai konten
+                      border: 'none',
+                      borderRadius: '6px', // Sudut sedikit membulat
+                      fontWeight: 'bold',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '6px',
+                      width: 'fit-content' // Agar ukurannya sesuai konten, tidak full
+                  }}
+              >
+                  <Coffee size={18} /> Buy Me a Coffee
+              </motion.a>
+            </div>
           </motion.div>
         </div>
       </div>
