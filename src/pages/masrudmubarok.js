@@ -61,7 +61,7 @@ export default function MasrudMubarok() {
             />
           </a>
           <a
-            href="https://youtube.com/masrudmubarok/"
+            href="https://www.youtube.com/@masrudmubarok"
             className={styles.link}
             target="_blank"
             rel="noopener noreferrer"
