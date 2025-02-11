@@ -6,17 +6,17 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: 'Structured Learning Path',
-    Svg: require('@site/static/img/undraw_hello_ccwj.svg').default,
+    Svg: require('@site/static/img/undraw_applications_h0mq.svg').default,
     description: 'Devlite offers a tiered handbook covering software development from beginner to master levels, ensuring a systematic learning journey.',
   },
   {
     title: 'Industry-Relevant & Up-to-Date',
-    Svg: require('@site/static/img/undraw_hello_ccwj.svg').default,
+    Svg: require('@site/static/img/undraw_engineering-team_13ax.svg').default,
     description: 'All content is curated based on the latest industry trends, covering everything from programming fundamentals to advanced system architecture.',
   },
   {
     title: 'Open Source & Free',
-    Svg: require('@site/static/img/undraw_hello_ccwj.svg').default,
+    Svg: require('@site/static/img/undraw_tasting_cd81.svg').default,
     description: 'The handbook is fully open-source, accessible to everyone, and open for contributions without restrictions.',
   },
 ];
@@ -60,6 +60,7 @@ export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
+        <h1 className="text--center"><b>Why Devlite?</b></h1>
         <div className="row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />

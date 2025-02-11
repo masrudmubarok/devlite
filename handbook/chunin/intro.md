@@ -5,46 +5,40 @@ sidebar_position: 1
 # Chunin Lesson
 
 ## Introduction
-Welcome to the **Chunin Lesson**, the starting point for mastering software development. At this level, you will build a solid foundation in programming concepts and essential web technologies.
+The **Chunin Level** is designed for developers who have mastered the basics and are ready to build more complex applications. This stage focuses on advanced programming concepts, databases, and full-stack development.
 
 ## Topics Covered
-### 1. Programming Languages
-- Python
-- JavaScript
-- Java
 
-### 2. Algorithm
-- Searching
-- Sorting
-- Recursion
-- Basic Math
-- Greedy
-- Graph
-- Hashing
-- Backtracking
-- Djikstra
+### 1. Databases
+- **SQL**: MySQL, PostgreSQL
+- **NoSQL**: MongoDB
 
-### 3. Setup Local Environment
-- VS Code
-- Extensions
-- Run First Program
+### 2. Advanced Programming
+- Asynchronous Programming (Promises, Async/Await)
+- Closures, Scope, Event Loop
+- DOM Manipulation & Event Handling
 
-### 4. Web Development Basics
-- HTML
-- CSS
+### 3. Front-End Development
+- Bootstrap
+- TailwindCSS
+- React.js
+- Vue.js
+- Angular.js
 
-### 5. Version Control
-- Git
-- GitHub
+### 4. Back-End Development
+- **JavaScript**: Node.js (Express.js)
+- **Python**: Django
+- **Java**: Spring Boot
+- **PHP**: Laravel
+- RESTful APIs
+- GraphQL
 
-### 6. Object Oriented Programming
-- Class & Object
-- Inheritance
-- Polymorphism
-- Encapsulation
-- Abstraction
+### 5. Testing & Quality Assurance
+- Unit Testing (Jest & Mocha)
+- Test-Driven Development (TDD)
+- Behavior-Driven Development (BDD)
 
 ## Next Steps
-After completing the **Genin Lesson**, you will be ready to advance to the **Chunin Level**, where you will deepen your knowledge in front-end and back-end development.
+After completing the **Chunin Level**, you will be prepared to tackle the **Jounin Level**, where you will dive into system design, scalability, and DevOps practices.
 
-Let's begin your journey! 🚀
+Keep pushing forward! 🚀
