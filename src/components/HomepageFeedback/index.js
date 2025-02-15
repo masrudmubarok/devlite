@@ -3,12 +3,14 @@ import { motion, useAnimation } from "framer-motion";
 import { Coffee } from "lucide-react"; // Import ikon kopi
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+import Modal from './modal';
 
 function HomepageFeedback() {
   const controlsLeft = useAnimation();
   const controlsRight = useAnimation();
   const refLeft = useRef(null);
   const refRight = useRef(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -57,16 +59,14 @@ function HomepageFeedback() {
             <p className={styles.subtitle}>
               Help us improve Devlite! Share your thoughts, suggestions, or report issues.
             </p>
-            <motion.a
-              href="https://github.com/your-repo/issues"
-              target="_blank"
-              rel="noopener noreferrer"
+            <motion.button
               className="button button--primary button--lg"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => setIsModalOpen(true)}
             >
               Submit Feedback
-            </motion.a>
+            </motion.button>
           </motion.div>
 
           <motion.div
@@ -81,7 +81,6 @@ function HomepageFeedback() {
               If you find this content useful, consider supporting us to keep it running.
             </p>
             
-            {/* Wrapper agar tombol berada di tengah */}
             <div style={{ display: 'flex', justifyContent: 'center' }}>
               <motion.a
                   href="https://www.buymeacoffee.com/yourprofile"
@@ -91,16 +90,16 @@ function HomepageFeedback() {
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                   style={{
-                      backgroundColor: '#8B5E3C', // Warna coklat susu
-                      color: '#fff', // Teks putih
-                      padding: '8px 16px', // Ukuran lebih kecil agar sesuai konten
+                      backgroundColor: '#8B5E3C',
+                      color: '#fff',
+                      padding: '8px 16px',
                       border: 'none',
-                      borderRadius: '6px', // Sudut sedikit membulat
+                      borderRadius: '6px',
                       fontWeight: 'bold',
                       display: 'flex',
                       alignItems: 'center',
                       gap: '6px',
-                      width: 'fit-content' // Agar ukurannya sesuai konten, tidak full
+                      width: 'fit-content'
                   }}
               >
                   <Coffee size={18} /> Buy Me a Coffee
@@ -109,6 +108,7 @@ function HomepageFeedback() {
           </motion.div>
         </div>
       </div>
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 }
