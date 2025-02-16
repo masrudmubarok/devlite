@@ -1,0 +1,141 @@
+/* Container utama */
+.portfolioContainer {
+  max-width: 1200px;
+  margin: 0 5% 0 5%;
+  text-align: center;
+}
+
+/* Filter button container tetap di atas */
+.buttonsContainerFixed {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  background: white;
+  padding: 15px 0;
+  z-index: 1000;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Tombol filter */
+.filterButton {
+  padding: 10px 20px;
+  border: 2px solid var(--ifm-color-primary);
+  background-color: white;
+  color: var(--ifm-color-primary);
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.filterButton:hover {
+  background-color: var(--ifm-color-primary);
+  color: white;
+}
+
+.filterButton.active {
+  background-color: var(--ifm-color-primary);
+  color: white;
+}
+
+/* Grid layout fix 3 kolom */
+.galleryGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 3 kolom tetap */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Card item */
+.galleryItem {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.galleryItem:hover {
+  transform: scale(1.02); /* Sedikit efek saat hover card */
+}
+
+/* Gambar dalam card */
+.galleryImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: filter 0.3s ease-in-out;
+}
+
+.galleryImage:hover {
+  filter: brightness(0.7);
+}
+
+/* Kontainer teks di dalam card */
+.cardContent {
+  padding: 15px;
+}
+
+/* Judul Project */
+.projectTitle {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Kategori Project */
+.projectCategory {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+/* Tech Stack */
+.projectTech {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--ifm-color-primary);
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Jika tombol terlalu berdekatan */
+  margin-top: 10px; /* Tambahkan margin jika tombol terlalu dekat dengan elemen lain */
+}
+
+.iconButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  text-decoration: none;
+  color: black;
+}
+
+.iconButton:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.imageContainer {
+  overflow: hidden;
+}
+
+/* In your index.module.css */
+.titleSection {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
