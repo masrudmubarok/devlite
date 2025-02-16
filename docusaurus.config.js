@@ -7,7 +7,7 @@ const config = {
   tagline: 'Like a Ninja: Fast, Fierce, Unstoppable 🚀',
   favicon: 'img/devlite.png',
 
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://masrudmubarok.github.io',
   baseUrl: '/',
 
   organizationName: 'facebook',
