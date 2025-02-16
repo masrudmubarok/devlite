@@ -130,7 +130,7 @@
 /* In your index.module.css */
 .titleSection {
   margin-bottom: 20px;
-  margin-top: 20px;
+  margin-top: 3%;
   text-align: center;
 }
 
@@ -138,4 +138,84 @@
   font-size: 2rem;
   font-weight: bold;
   color: #333;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .filterButton {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .galleryGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .galleryItem {
+    padding: 15px;
+  }
+
+  .galleryImage {
+    height: 150px;
+  }
+
+  .projectTitle {
+    font-size: 1.1rem;
+  }
+
+  .projectCategory {
+    font-size: 0.9rem;
+  }
+
+  .techIcon {
+    font-size: 0.9rem;
+  }
+
+  .iconButton {
+    font-size: 1.3rem;
+  }
+}
+
+/* Mobile Small */
+@media screen and (max-width: 480px) {
+  .galleryGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: 1.7rem;
+  }
+
+  .filterButton {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  .galleryItem {
+    padding: 12px;
+  }
+
+  .galleryImage {
+    height: 120px;
+  }
+
+  .projectTitle {
+    font-size: 1rem;
+  }
+
+  .projectCategory {
+    font-size: 0.8rem;
+  }
+
+  .techIcon {
+    font-size: 0.8rem;
+  }
+
+  .iconButton {
+    font-size: 1.2rem;
+  }
 }
