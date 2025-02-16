@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import styles from "./index.module.css";
-import projectImage from "./project.png";
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaExternalLinkAlt, FaCode } from "react-icons/fa";
 
 const techIcons = {
@@ -15,12 +14,12 @@ const techIcons = {
 };
 
 const portfolioItems = [
-  { id: 1, category: "Front-End", title: "Landing Page", tech: ["HTML", "CSS", "JS"], image: projectImage, site: "#", code: "#" },
-  { id: 2, category: "Front-End", title: "Portfolio Website", tech: ["React", "CSS"], image: projectImage, site: "#", code: "#" },
-  { id: 3, category: "Front-End", title: "Dashboard Admin", tech: ["React", "Node.js"], image: projectImage, site: "#", code: "#" },
-  { id: 4, category: "Back-End", title: "API Service", tech: ["Node.js", "Express"], image: projectImage, site: "#", code: "#" },
-  { id: 5, category: "Full-Stack", title: "E-Commerce Platform", tech: ["React", "Node.js"], image: projectImage, site: "#", code: "#" },
-  { id: 6, category: "Full-Stack", title: "Chat Application", tech: ["React", "Socket.io", "Node.js"], image: projectImage, site: "#", code: "#" },
+  { id: 1, category: "Front-End", title: "Landing Page", tech: ["HTML", "CSS", "JS"], image: "/img/project.png", site: "#", code: "#" },
+  { id: 2, category: "Front-End", title: "Portfolio Website", tech: ["React", "CSS"], image: "/img/project.png", site: "#", code: "#" },
+  { id: 3, category: "Front-End", title: "Dashboard Admin", tech: ["React", "Node.js"], image: "/img/project.png", site: "#", code: "#" },
+  { id: 4, category: "Back-End", title: "API Service", tech: ["Node.js", "Express"], image: "/img/project.png", site: "#", code: "#" },
+  { id: 5, category: "Full-Stack", title: "E-Commerce Platform", tech: ["React", "Node.js"], image: "/img/project.png", site: "#", code: "#" },
+  { id: 6, category: "Full-Stack", title: "Chat Application", tech: ["React", "Socket.io", "Node.js"], image: "/img/project.png", site: "#", code: "#" },
 ];
 
 const categories = ["All", "Front-End", "Back-End", "Full-Stack"];

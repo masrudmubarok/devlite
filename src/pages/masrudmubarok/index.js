@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styles from "./index.module.css";
 import { motion } from "framer-motion";
 import { FaLinkedin, FaGithub, FaYoutube, FaEnvelope, FaGlobe } from "react-icons/fa";
-import profilePic from "./profile.png"; // Gambar profil
 
 export default function MasrudMubarok() {
   const [iconTransforms, setIconTransforms] = useState({
@@ -33,7 +32,7 @@ export default function MasrudMubarok() {
         transition={{ duration: 0.5 }}
       >
         <motion.img
-          src={profilePic}
+          src="/img/profile.png"
           alt="Masrud Mubarok"
           className={styles.profilePic}
           initial={{ scale: 0 }}
