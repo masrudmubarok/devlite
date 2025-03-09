@@ -1,8 +1,8 @@
 {
     "label": "Programming Languages",
-    "position": 1,
+    "position": 4,
     "link": {
       "type": "generated-index",
-      "description": "5 minutes to learn the most important Docusaurus concepts."
+      "description": "Learn the basics of these popular programming languages as an introduction."
     }
-  }  
+}  

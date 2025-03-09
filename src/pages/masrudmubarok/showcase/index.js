@@ -1,25 +1,32 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaExternalLinkAlt, FaCode } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaLaravel, FaVuejs, FaJava, FaExternalLinkAlt, FaCode } from "react-icons/fa";
+import { SiMongodb, SiMysql, SiNextdotjs, SiExpress, SiRedis, SiElasticsearch, SiSwagger } from "react-icons/si";
 import styles from "./index.module.css";
 
 const techIcons = {
-  "HTML": <FaHtml5 className={styles.icon} />, 
-  "CSS": <FaCss3Alt className={styles.icon} />, 
-  "JS": <FaJs className={styles.icon} />, 
-  "React": <FaReact className={styles.icon} />, 
-  "Node.js": <FaNodeJs className={styles.icon} />, 
-  "Express": <FaNodeJs className={styles.icon} />, 
-  "Socket.io": <FaNodeJs className={styles.icon} />, 
+  "Node.js": { icon: <FaNodeJs className={styles.techIcon} />, link: "https://nodejs.org/" },
+  "Express.js": { icon: <SiExpress className={styles.techIcon} />, link: "https://expressjs.com/" },
+  "React.js": { icon: <FaReact className={styles.techIcon} />, link: "https://react.dev/" },
+  "Vue.js": { icon: <FaVuejs className={styles.techIcon} />, link: "https://vuejs.org/" },
+  "Next.js": { icon: <SiNextdotjs className={styles.techIcon} />, link: "https://nextjs.org/" },
+  "Laravel": { icon: <FaLaravel className={styles.techIcon} />, link: "https://laravel.com/" },
+  "Java": { icon: <FaJava className={styles.techIcon} />, link: "https://www.java.com/" },
+  "MySQL": { icon: <SiMysql className={styles.techIcon} />, link: "https://www.mysql.com/" },
+  "MongoDB": { icon: <SiMongodb className={styles.techIcon} />, link: "https://www.mongodb.com/" },
+  "Redis": { icon: <SiRedis className={styles.techIcon} />, link: "https://redis.io/" },
+  "Elasticsearch": { icon: <SiElasticsearch className={styles.techIcon} />, link: "https://www.elastic.co/elasticsearch/" },
+  "Swagger API": { icon: <SiSwagger className={styles.techIcon} />, link: "https://swagger.io/" },
 };
 
 const portfolioItems = [
-  { id: 1, category: "Web", title: "Landing Page", tech: ["HTML", "CSS", "JS"], image: "/img/project.png", site: "#", code: "#" },
-  { id: 2, category: "Web", title: "Portfolio Website", tech: ["React", "CSS"], image: "/img/project.png", site: "#", code: "#" },
-  { id: 3, category: "Web", title: "Dashboard Admin", tech: ["React", "Node.js"], image: "/img/project.png", site: "#", code: "#" },
-  { id: 4, category: "Mobile", title: "Mobile App", tech: ["React Native", "Node.js"], image: "/img/project.png", site: "#", code: "#" },
-  { id: 5, category: "Desktop", title: "Desktop Application", tech: ["Electron", "Node.js"], image: "/img/project.png", site: "#", code: "#" },
-  { id: 6, category: "Desktop", title: "Text Editor", tech: ["Electron", "React"], image: "/img/project.png", site: "#", code: "#" },
+  { id: 1, category: "Web", title: "SIMKEU PPTIK", description: "A financial management system for PPTIK.", tech: ["Laravel", "Vue.js", "MySQL"], image: "/img/project.png", site: "#", code: "#" },
+  { id: 2, category: "Web", title: "PPTIK Academy Admin", description: "Admin panel for managing courses and users.", tech: ["Laravel", "Vue.js", "MySQL"], image: "/img/project.png", site: "#", code: "#" },
+  { id: 3, category: "Mobile", title: "PPTIK Academy", description: "Mobile app for students to access learning materials.", tech: ["Java", "MySQL"], image: "/img/project.png", site: "#", code: "#" },
+  { id: 4, category: "Web", title: "Devlite", description: "A handbook platform for developers to learn and refine the software development skills.", tech: ["React.js"], image: "/img/devlite-portofolio.png", site: "https://devlite.org/", code: "#" },
+  { id: 5, category: "Web", title: "Devanote", description: "A note-taking web app with real-time collaboration.", tech: ["Node.js", "React.js", "Express.js", "MongoDB"], image: "/img/project.png", site: "#", code: "#" },
+  { id: 6, category: "Web", title: "Khelsya Store", description: "An e-commerce website for selling fashion products.", tech: ["Next.js", "MongoDB"], image: "/img/project.png", site: "#", code: "#" },
+  { id: 7, category: "Web", title: "Attendance API", description: "An API for managing user attendance with real-time data processing", tech: ["Express.js", "MySQL", "Redis", "Elasticsearch", "Swagger API"], image: "/img/attendance-api.png", site: "https://attendance-api-inky.vercel.app/", code: "https://github.com/masrudmubarok/attendance-api" },
 ];
 
 const categories = ["All", "Web", "Mobile", "Desktop"];
@@ -34,17 +41,23 @@ const PortfolioGallery = () => {
   return (
     <div className={styles.fixedContainer}>
       <div className={styles.portfolioContainer}>
-        {/* Title Section */}
-        <motion.div 
-          initial={{ scale: 0 }} 
-          animate={{ scale: 1 }} 
-          transition={{ duration: 0.5, ease: "easeOut" }} 
-          className={styles.titleSection}
+      <motion.div 
+        initial={{ scale: 0 }} 
+        animate={{ scale: 1 }} 
+        transition={{ duration: 0.5, ease: "easeOut" }} 
+        className={styles.titleSection}
+      >
+        <h2 className={styles.title}>Portfolio</h2>
+        <motion.p 
+          className={styles.description} 
+          initial={{ opacity: 0, y: 10 }} 
+          animate={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <h2 className={styles.title}>My Projects</h2>
-        </motion.div>
+          A collection of my best work, blending innovation, performance, and seamless functionality. Each project is crafted with precision and powered by cutting-edge technology.
+        </motion.p>
+      </motion.div>
 
-        {/* Filter Wrapper */}
         <div className={styles.filterWrapper}>
           <div className={styles.buttonsContainerFixed}>
             {categories.map(category => (
@@ -52,10 +65,9 @@ const PortfolioGallery = () => {
                 key={category}
                 className={`${styles.filterButton} ${activeCategory === category ? styles.active : ""}`}
                 onClick={() => setActiveCategory(category)}
-                whileHover={{ scale: 1.1 }} // Slight zoom effect on hover
-                transition={{ duration: 0.2 }}
-                initial={{ scale: 0 }} // Start scale 0
-                animate={{ scale: 1 }} // Animate to scale 1
+                whileHover={{ scale: 1.1 }}
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
               >
                 {category}
@@ -64,66 +76,46 @@ const PortfolioGallery = () => {
           </div>
         </div>
 
-        {/* Portfolio Gallery */}
         <motion.div layout className={styles.galleryGrid}>
           {filteredItems.map((item) => (
             <PortfolioItem key={item.id} item={item} />
           ))}
         </motion.div>
+
       </div>
     </div>
   );
 };
 
-// Portfolio Item without Scroll Animation
-const PortfolioItem = ({ item }) => {
+const PortfolioItem = ({ item, activeTech, setActiveTech }) => {
   return (
-    <motion.div 
-      initial={{ scale: 1 }} 
-      animate={{ scale: 1 }} 
-      transition={{ duration: 0.5, ease: "easeOut" }} 
-      className={styles.galleryItem}
-    >
+    <motion.div className={styles.galleryItem}>
       <div className={styles.imageContainer}>
-        <motion.img
-          src={item.image} 
-          alt={item.title} 
-          className={styles.galleryImage} 
-          whileHover={{ scale: 1.1 }} // Zoom effect on image hover
-          transition={{ duration: 0.3 }}
-        />
+        <motion.img src={item.image} alt={item.title} className={styles.galleryImage} />
+        <div className={styles.buttonOverlay}>
+          <motion.a href={item.site} target="_blank" className={styles.iconButton}>
+            <FaExternalLinkAlt /> Demo
+          </motion.a>
+          <motion.a href={item.code} target="_blank" className={styles.iconButton}>
+            <FaCode /> Code
+          </motion.a>
+        </div>
       </div>
       <div className={styles.cardContent}>
         <h3 className={styles.projectTitle}>{item.title}</h3>
-        {/* Removed category line here */}
+        <p className={styles.projectDescription}>{item.description}</p>
         <div className={styles.projectTech}>
           {item.tech.map((tech, index) => (
-            <span key={index} className={styles.techIcon}>
-              {techIcons[tech]} {tech}
-            </span>
+            <motion.a
+              key={index}
+              href={techIcons[tech]?.link || "#"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${styles.techButton} ${activeTech === tech ? styles.active : ""}`}
+            >
+              {techIcons[tech]?.icon}
+            </motion.a>
           ))}
-        </div>
-        <div className={styles.buttonContainer}>
-          <motion.a 
-            href={item.site} 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className={styles.iconButton}
-            whileHover={{ scale: 1.2 }} // Zoom effect on button hover
-            transition={{ duration: 0.2 }}
-          >
-            <FaExternalLinkAlt />
-          </motion.a>
-          <motion.a 
-            href={item.code} 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className={styles.iconButton}
-            whileHover={{ scale: 1.2 }} // Zoom effect on button hover
-            transition={{ duration: 0.2 }}
-          >
-            <FaCode />
-          </motion.a>
         </div>
       </div>
     </motion.div>

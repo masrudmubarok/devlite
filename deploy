@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Stop script if there is an error
+set -e
+
+# Build project
+echo "Building project..."
+pnpm run build
+
+# Create CNAME file with the domain
+echo "Creating CNAME file..."
+echo "devlite.org" > build/CNAME
+
+# Deploy to GitHub Pages
+echo "Deploying to GitHub Pages..."
+pnpm run deploy
+
+echo "Deployment successful!"

@@ -1,13 +1,12 @@
 import { themes as prismThemes } from 'prism-react-renderer';
-import { FaGithub, FaYoutube } from 'react-icons/fa';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Mastering Software Development',
-  tagline: 'Like a Ninja: Fast, Fierce, Unstoppable 🚀',
+  title: 'Software Development Handbook',
+  tagline: 'With a Ninja-Inspired Learning Approach 🚀',
   favicon: 'img/devlite.png',
 
-  url: 'https://masrudmubarok.github.io',
+  url: 'https://devlite.org',
   baseUrl: '/',
 
   organizationName: 'facebook',
@@ -35,6 +34,27 @@ const config = {
         },
       }),
     ],
+  ],
+
+  headTags: [
+    {
+      tagName: 'script',
+      attributes: {
+        async: 'true',
+        src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3468535792953225',
+        crossorigin: 'anonymous',
+      },
+    },
+    {
+      tagName: 'script',
+      attributes: {},
+      innerHTML: `
+        (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-3468535792953225",
+          enable_page_level_ads: true
+        });
+      `,
+    },
   ],
 
   plugins: [
@@ -136,12 +156,6 @@ const config = {
           ],
         },
         {
-          to: '/#roadmap',
-          label: 'Roadmap',
-          activeBaseRegex: '/#roadmap',
-          position: 'right',
-        },
-        {
           to: '/#about',
           label: 'About',
           activeBaseRegex: '/#about',
@@ -154,14 +168,14 @@ const config = {
       ],
     },
     footer: {
-      style: 'dark', // Bisa 'light' atau 'dark'
+      style: 'dark',
       copyright: `© ${new Date().getFullYear()} Devlite. All rights reserved.`,
     },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
-  }),  
+  }),
 };
 
 export default config;
